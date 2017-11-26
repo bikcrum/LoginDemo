@@ -1,7 +1,9 @@
-package com.bikcrum.logindemo;
+package com.bikcrum.logindemo.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.bikcrum.logindemo.R;
 
 public class RegistrationActivity extends AppCompatActivity {
 

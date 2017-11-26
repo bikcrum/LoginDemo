@@ -1,68 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="16dp"
-    android:orientation="vertical"
-    tools:context="com.bikcrum.logindemo.MainActivity">
+    android:layout_height="wrap_content">
 
-    <com.rengwuxian.materialedittext.MaterialEditText
+    <!-- Add this layout as parent of CardView -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/name"
-        app:met_floatingLabel="normal"
-        app:met_floatingLabelText="@string/name"
-        app:met_singleLineEllipsis="true" />
+        android:layout_height="wrap_content">
 
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="20dp"
+            app:cardBackgroundColor="#ff0000"
+            app:cardUseCompatPadding="false" />
 
-    <com.rengwuxian.materialedittext.MaterialEditText
+    </LinearLayout>
+    <!--Close parent layout-->
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/email"
-        app:met_floatingLabel="normal"
-        app:met_floatingLabelText="@string/email"
-        app:met_singleLineEllipsis="true" />
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="#0000ff"
+        android:gravity="center"
+        android:text="i am top view!"
+        android:textAllCaps="true"
+        android:textColor="#00ff00"
+        android:textSize="30sp" />
 
-    <com.rengwuxian.materialedittext.MaterialEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/contact_number"
-        app:met_floatingLabel="normal"
-        app:met_floatingLabelText="@string/contact_number"
-        app:met_singleLineEllipsis="true" />
-
-    <com.rengwuxian.materialedittext.MaterialEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/password"
-        app:met_floatingLabel="normal"
-        app:met_floatingLabelText="@string/password"
-        app:met_singleLineEllipsis="true" />
-
-    <com.rengwuxian.materialedittext.MaterialEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/confirm_password"
-        app:met_floatingLabel="normal"
-        app:met_floatingLabelText="@string/confirm_password"
-        app:met_singleLineEllipsis="true" />
-
-    <com.dd.processbutton.iml.ActionProcessButton
-        android:id="@+id/sign_in_btn"
-        android:layout_width="match_parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        app:pb_colorNormal="@color/colorPrimaryDark"
-        app:pb_colorPressed="@color/colorPrimary"
-        app:pb_colorComplete="@color/colorAccent"
-        app:pb_colorProgress="@color/colorAccentDark"
-        app:pb_colorError="@color/colorRed"
-        android:textColor="@color/colorWhite"
-        app:pb_cornerRadius="5dp"
-        android:text="@string/register"/>
-
-</LinearLayout>
+</FrameLayout>
