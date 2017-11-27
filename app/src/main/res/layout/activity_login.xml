@@ -36,7 +36,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawablePadding="5dp"
-                        android:inputType="textCapWords"
+                        android:inputType="textEmailAddress"
                         android:textSize="16sp" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -47,6 +47,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:hint="@string/password"
+                    android:id="@+id/password_field_layout"
                     app:passwordToggleEnabled="true">
 
                     <android.support.design.widget.TextInputEditText
@@ -65,14 +66,24 @@
                     android:layout_marginBottom="20dp"
                     android:text="@string/remember_me" />
 
-                <Button
+                <com.dd.processbutton.iml.ActionProcessButton
                     android:id="@+id/sign_in_btn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="20dp"
                     android:background="@drawable/button_background"
+                    app:pb_textComplete="@string/success"
+                    app:pb_textProgress="@string/signing_in"
+                    app:pb_colorError="@color/red_error"
+                    app:pb_colorNormal="@color/colorPrimaryDark"
+                    app:pb_colorPressed="@color/colorPrimary"
+                    app:pb_colorProgress="@color/colorGreenDark"
+                    app:pb_colorComplete="@color/colorGreen"
+                    app:pb_textError="@string/try_again"
+                    app:pb_cornerRadius="3dp"
                     android:text="@string/login"
+                    android:onClick="signIn"
                     android:textColor="@color/colorWhite"
                     android:textSize="16sp"/>
 

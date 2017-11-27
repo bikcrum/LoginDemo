@@ -6,11 +6,12 @@
     android:layout_height="match_parent"
     android:layout_margin="16dp"
     android:orientation="vertical"
-    tools:context="com.bikcrum.logindemo.activity.MainActivity">
+    tools:context="com.bikcrum.logindemo.activity.RegistrationActivity">
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
+        android:id="@+id/name_field_layout"
         android:hint="@string/name">
 
         <android.support.design.widget.TextInputEditText
@@ -27,6 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
+        android:id="@+id/email_field_layout"
         android:hint="@string/email">
 
         <android.support.design.widget.TextInputEditText
@@ -34,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawablePadding="5dp"
-            android:inputType="textCapWords"
+            android:inputType="textEmailAddress"
             android:textSize="16sp" />
 
     </android.support.design.widget.TextInputLayout>
@@ -43,6 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
+        android:id="@+id/contact_field_layout"
         android:hint="@string/contact_number">
 
         <android.support.design.widget.TextInputEditText
@@ -50,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawablePadding="5dp"
-            android:inputType="textCapWords"
+            android:inputType="phone"
             android:textSize="16sp" />
 
     </android.support.design.widget.TextInputLayout>
@@ -59,6 +62,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
+        app:passwordToggleEnabled="true"
+        android:id="@+id/password_field_layout"
         android:hint="@string/password">
 
         <android.support.design.widget.TextInputEditText
@@ -66,7 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawablePadding="5dp"
-            android:inputType="textCapWords"
+            android:inputType="textPassword"
             android:textSize="16sp" />
 
     </android.support.design.widget.TextInputLayout>
@@ -74,7 +79,9 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/confirm_password_field_layout"
         android:layout_marginBottom="20dp"
+        app:passwordToggleEnabled="true"
         android:hint="@string/confirm_password">
 
         <android.support.design.widget.TextInputEditText
@@ -82,19 +89,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawablePadding="5dp"
-            android:inputType="textCapWords"
+            android:inputType="textPassword"
             android:textSize="16sp" />
 
     </android.support.design.widget.TextInputLayout>
 
-    <Button
-        android:id="@+id/sign_in_btn"
+    <com.dd.processbutton.iml.ActionProcessButton
+        android:id="@+id/submit_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="20dp"
         android:background="@drawable/button_background"
-        android:text="@string/submit"
+        app:pb_textComplete="@string/success"
+        app:pb_textProgress="@string/sumbitting"
+        app:pb_colorError="@color/red_error"
+        app:pb_colorNormal="@color/colorPrimaryDark"
+        app:pb_colorPressed="@color/colorPrimary"
+        app:pb_colorProgress="@color/colorGreenDark"
+        app:pb_colorComplete="@color/colorGreen"
+        app:pb_textError="@string/try_again"
+        app:pb_cornerRadius="3dp"
+        android:text="@string/sumbit"
+        android:onClick="submit"
         android:textColor="@color/colorWhite"
         android:textSize="16sp"/>
+
 </LinearLayout>

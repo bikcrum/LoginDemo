@@ -10,7 +10,21 @@
     <string name="login">SIGN IN</string>
     <string name="ok">OK</string>
     <string name="or">OR</string>
-    <string name="success">Success</string>
+    <string name="success">SUCCESS</string>
     <string name="remember_me">Remember me</string>
     <string name="submit">Submit</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="please_sign_up">Email not registered. Please sign up</string>
+    <string name="incorrect_password">Incorrect Password</string>
+    <string name="signing_in">SIGNING IN</string>
+    <string name="try_again">TRY AGAIN</string>
+    <string name="sumbit">SUBMIT</string>
+    <string name="sumbitting">SUBMITTING</string>
+    <string name="empty_password">Empty Password</string>
+    <string name="name_is_empty">Name can\'t be empty</string>
+    <string name="contact_is_empty">Contact Number can\'t be empty</string>
+    <string name="password_is_empty">Password can\'t be empty</string>
+    <string name="password_no_match">Password do not match</string>
+    <string name="already_registered">Already Registered</string>
+    <string name="main_activity">Main Activity</string>
 </resources>
